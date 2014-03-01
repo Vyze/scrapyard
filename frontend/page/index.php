@@ -6,6 +6,13 @@
 class page_index extends Page {
     function init() {
         parent::init();
-        $this->add('LoremIpsum');
+
+        $this->title = 'Search';
+
+        $l = $this->add('Lister_Scrap');
+        $l->setModel('Scrap');
+    }
+    function defaultTemplate() {
+        return array('page/index');
     }
 }
