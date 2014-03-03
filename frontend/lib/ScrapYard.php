@@ -18,7 +18,7 @@ class ScrapYard extends ApiFrontend {
 
 
         $this->dbConnect();
-        $this->add('jUI');
+        $this->addJUi();
 
         $this->setLayout();
         $this->addMenu();
@@ -28,6 +28,11 @@ class ScrapYard extends ApiFrontend {
 
     private function setLayout() {
         $this->layout = $this->add('Layout_Basic');
+    }
+    private function addJUi() {
+        $this->add('jUI')
+            ->addStylesheet('scrapyard')
+        ;
     }
     private function addMenu() {
         $menu = $this->layout->add('Menu',null,'Main_Menu');

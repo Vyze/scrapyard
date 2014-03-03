@@ -1,0 +1,50 @@
+ul.atk-lister.scrap {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #3a3a3a;
+  font-size: 12px;
+}
+ul.atk-lister.scrap li {
+  border: 1px #c2c2c2 dotted;
+  border-top: none;
+  padding: 0 0 5px 0;
+  margin: 0 0 10px 0;
+}
+ul.atk-lister.scrap li .info_wrapper {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px #7c7c7c solid;
+  background-color: #505050;
+}
+ul.atk-lister.scrap li .info_wrapper .added_by {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+ul.atk-lister.scrap li .info_wrapper .created_updated {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.9);
+}
+ul.atk-lister.scrap li .value {
+  padding: 5px;
+}
+.float-left {
+  float: left !important;
+}
+.float-right {
+  float: right !important;
+}
+.clear {
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+}
+.clearafter:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+}

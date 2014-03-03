@@ -1,9 +1,14 @@
-<ul id="{$_name}" class="{$class} atk-lister">
-    {$quick_search}
+<ul id="{$_name}" class="{$class} atk-lister scrap">
+    <div class="clearafter">
+        {$quick_search}
+    </div>
     {rows}{row}
   <li class="{$odd_even} atk-lister-row">
-      <div>[Added by: {$user}]</div>
-      <div>{$value}</div>
+      <div class="info_wrapper clearafter">
+          <div class="created_updated float-right">[created: {$created_at}][updated: {$updated_at}]</div>
+          <div class="added_by float-left">[Added by: {$user}]</div>
+      </div>
+      <div class="value">{$value}</div>
   </li>{/}{/}
   {$totals}
   <div>

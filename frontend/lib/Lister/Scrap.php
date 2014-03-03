@@ -13,6 +13,11 @@ class Lister_Scrap extends CompleteLister {
         $this->addQuickSearch(array('value'));
     }
 
+    function formatRow() {
+        parent::formatRow();
+        $this->current_row_html['value'] = $this->formatText($this->current_row['value']);
+    }
+
     function addPaginator($ipp = 25, $options = null) {
         if ($this->paginator) {
             return $this->paginator;
@@ -30,5 +35,10 @@ class Lister_Scrap extends CompleteLister {
 
     function defaultTemplate() {
         return array('view/lister_scrap');
+    }
+
+    private function formatText($text) {
+        $text = nl2br($text);
+        return $text;
     }
 }
