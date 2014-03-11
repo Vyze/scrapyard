@@ -38,6 +38,7 @@ class Lister_Scrap extends CompleteLister {
     }
 
     private function formatText($text) {
+        $text = htmlspecialchars($text);
         $text = nl2br($text);
         return $text;
     }
