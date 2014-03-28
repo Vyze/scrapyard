@@ -44,7 +44,7 @@ class ScrapYard extends ApiFrontend {
         $header = $this->layout->addHeader('View');
         $this->layout->header_wrap->addClass('header');
         $header->addClass('header-wrapper');
-        $header->add('View')->setElement('img')->addClass('logo')->setAttr('src',
+        $header->add('View')->setElement('img')->addStyle('width','250px')->addClass('logo')->setAttr('src',
             $this->api->pathfinder->public_location->getURL().'images/logo.png');
         //$header->add('View')->setClass('atk-label atk-swatch-yellow atk-size-milli')->set('Build: '.$this->build);
 
