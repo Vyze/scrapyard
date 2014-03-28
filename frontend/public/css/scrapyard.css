@@ -29,6 +29,9 @@ ul.atk-lister.scrap li .info_wrapper .created_updated {
 ul.atk-lister.scrap li .value {
   padding: 5px;
 }
+.logo {
+  width: 250px;
+}
 .float-left {
   float: left !important;
 }
