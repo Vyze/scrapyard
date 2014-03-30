@@ -6,9 +6,8 @@
 class ScrapYard extends ApiFrontend {
     function init() {
         parent::init();
-        try {
-            $this->build = exec('git rev-list --count HEAD');
-        } catch (Exeption $e) {
+        $this->build = exec('git rev-list --count HEAD');
+        if ($this->build == '') {
             $this->build = 'No git';
         }
 
@@ -69,10 +68,10 @@ class ScrapYard extends ApiFrontend {
         ;
     }
     private function addMenu() {
-        $menu = $this->layout->add('Menu',null,'Main_Menu');
-        $menu->addMenuItem('','Home');
-        $menu->addMenuItem('users','Users');
-        $menu->addMenuItem('scrap','Scrap');
+        $menu = $this->layout->add('Menu_Vertical',null,'Main_Menu');
+        $menu->addItem('Home','index');
+        $menu->addItem('Users','users');
+        $menu->addItem('Scrap','scrap');
     }
     private function addAuth() {
         $this->add('Auth');
